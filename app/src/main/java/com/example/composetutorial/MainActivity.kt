@@ -9,6 +9,7 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Call
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.ExtendedFloatingActionButton
+import androidx.compose.material3.FabPosition
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.SnackbarDuration
@@ -44,6 +45,7 @@ fun SnackbarDemo() {
         snackbarHost = {
             SnackbarHost(hostState = snackbarHostState)
         },
+
         floatingActionButton = {
             ExtendedFloatingActionButton(
                 text = { Text("Show snackbar") },
@@ -72,6 +74,7 @@ fun SnackbarDemo() {
                 },
             )
         },
+        floatingActionButtonPosition = FabPosition.End,
     ) { contentPadding ->
         Text(text = "hello world", modifier = Modifier.padding(contentPadding))
     }
